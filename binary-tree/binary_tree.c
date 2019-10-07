@@ -90,11 +90,61 @@ void PostOrder(BTnode* root)
         printf("%c",root->data)
     }
 }
+
+//非递归中序遍历
+void Inorders(BTnode* root)
+{
+    BTnode* st[MAXSIZE];
+    BTnode* cur = root;
+    int top = -1;
+    while(top != -1 || cur)
+    {
+        while(cur)
+        {
+            st[++top] = cur;
+            cur = cur->left;
+        }
+        cur = st[top--];
+        printf("%c", cur->data);
+        cur = cur->right;
+    }
+}
+
+//祖先打印
+int PrintAncestors(BTnode *root, BTdata x)
+{
+    if(!root)
+    {
+        return 0;
+    }
+    if(root->data == x)
+    {
+        return 1;
+    }
+    if(PrintAncestors(root->left), x) || PrintAncestors(root->right, x))
+    {
+        printf("%c", root->data);
+        return 1;
+    }
+    return 0;
+}
 int main()
 {
     BTdata a[] = "ABD##E#H##CF##G##";
     int i = 0;
     BTnode* tree = CreatTree(a, &i);
     printf("叶子结点数:%d\n", BitreeLeaf(tree));
+    printf("深度:%d\n", BitreeDepth(tree));
+    printf("二叉树的叶子总数:%d", BinaryTreeleafSize(tree));
+    printf("\n递归前序遍历:");
+    PreOrder(tree);
+    printf("\n递归中序遍历:");
+    InOrder(tree);
+    printf("\n递归后序遍历:");
+    PostOrder(tree);
+    printf("\n非递归中序遍历:");
+    Inorders(tree);
+    printf("\n打印祖先：");
+    PrintAncestors(tree,'H' );
     return 0;
 }
