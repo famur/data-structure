@@ -55,6 +55,41 @@ int BitreeLeaf(BTnode* root)
     return (BitreeLeaf(root->left) + BitreeLeaf(root->right));
 }
 
+//递归前序遍历
+void PreOrder(BTnode* root)
+{
+    if(root != NULL)
+    {
+        printf("%c", root->data);
+        PreOrder(root->left);
+        PreOrder(root->right);
+    }
+    else
+        return ;
+}
+
+//递归中序遍历
+void InOrder(BTnode* root)
+{
+    if(root != NULL)
+    {
+        InOrder(root->left);
+        printf("%c",root->data);
+        InOrder(root->right);
+    }
+    else
+        return ;
+}
+//递归后序遍历
+void PostOrder(BTnode* root)
+{
+    if(root != NULL)
+    {
+        PostOrder(root->left);
+        PostOrder(root->right);
+        printf("%c",root->data)
+    }
+}
 int main()
 {
     BTdata a[] = "ABD##E#H##CF##G##";
