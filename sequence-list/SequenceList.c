@@ -80,3 +80,113 @@ void SeqListPushFront(SeqList* psl, SLDataType x)
     }
     (psl->size)++;
 }
+
+void SeqListPopFront(SeqList* psl)
+{
+    int t = 0;
+    for (t = 0; t < psl->size; t++)
+    {
+        psl->array[t] = psl->array[t+1];
+    }
+    (psl->size)--;
+}
+
+void SeqListInsert(SeqList* psl, int pos, SLDataType x)
+{
+    int z = 0;
+    int t = 0;
+    if ((psl->size ) == psl->capicity)
+    {
+        CheckCapacity(psl);
+    }
+    for (t = psl->size; t >=pos-1; t--)
+    {
+        z = psl->array[t];
+        psl->array[pos - 1] = x;
+        psl->array[t+1] =z;
+    }
+    (psl->size)++;
+}
+
+void SeqListErase(SeqList* psl, int pos)
+{
+    int z = 0;
+    int t = 0;
+    if (psl->size == 0)
+    {
+        printf("无法删除！\n");
+    }
+    for (t = pos; t<psl->size; t++)
+    {
+        z = psl->array[t];
+        psl->array[t] = psl->array[t + 1];
+        psl->array[t + 1] = z;
+    }
+    (psl->size)--;
+}
+
+void SeqListRemove(SeqList* psl, SLDataType x)
+{
+    int t = SeqListFind(psl, x);
+    if (t+1==psl->size)
+    {
+        printf("无法移动！");
+    }
+    else
+    {
+        int y = 0;
+        int z = 0;
+        int q = t + 1;//移动次数
+        for (y = t; y <q; y++)
+        {
+            z = psl->array[y];
+            psl->array[y] = psl->array[y + 1];
+            psl->array[y + 1] = z;
+        }
+    }
+}
+
+void SeqListModify(SeqList* psl, int pos, SLDataType x)
+{
+    psl->array[pos - 1] = x;
+}
+
+int SeqListLength(SeqList* psl)
+{
+    return psl->size;
+}
+
+void SeqListPrint(SeqList* psl)
+{
+    int i = 0;
+    for (i = 0; i <psl->size; i++)
+    {
+        printf("%d ", psl->array[i]);
+    }
+    printf("\n");
+}
+
+int main()
+{
+    SeqList arr;
+    SeqListInit(&arr, 3);
+    SeqListPushBack(&arr, 7);
+    SeqListPushBack(&arr, 8);
+    SeqListPushBack(&arr, 9);
+    SeqListPushBack(&arr, 1);
+    SeqListPopBack(&arr);
+    SeqListPrint(&arr);
+    SeqListRemove(&arr, 1);
+    SeqListPopFront(&arr);
+    SeqListPushFront(&arr, 2);
+    int t = SeqListFind(&arr, 1);
+    printf("位置为：%d\n", t);
+    SeqListModify(&arr, 2, 6);
+    SeqListPrint(&arr);
+    SeqListInsert(&arr, 1, 5);
+    SeqListPrint(&arr);
+    int z = SeqListLength(&arr);
+    printf("个数为：%d\n",z);
+    SeqListDestory(&arr);
+    return 0;
+}
