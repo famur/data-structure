@@ -40,7 +40,7 @@ void CheckCapacity(SeqList* psl)
 
 void SeqListPushBack(SeqList* psl, SLDataType x)
 {
-    SeqListInsert(psl, psl->size+1 , x);
+    SeqListInsert(psl, psl->size + 1 , x);
 }
 
 void SeqListPopBack(SeqList* psl)
