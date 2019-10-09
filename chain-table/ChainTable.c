@@ -73,3 +73,31 @@ void SeqListPopBack(SeqList*s)
 {
     s->_size--;
 }
+
+int SeqListBinaryFind(SeqList* s)
+{
+    int x = 0;
+    printf("请输入查找的数>");
+    scanf("%d", &x);
+    int begin = 0, end = s->_size - 1;
+    while (begin <= end)
+    {
+        int mid = (begin + end) / 2;
+        if (s->_array[mid] < x)
+        {
+            begin = mid + 1;
+        }
+        else if (s->_array[mid] > x)
+        {
+            end = mid - 1;
+        }
+        else
+        {
+            printf("找到了：%d\n", s->_array[mid]);
+            return mid;
+        }
+    }
+    printf("该数字不存在！\n");
+    return -1;
+}
+
