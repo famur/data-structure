@@ -101,3 +101,35 @@ int SeqListBinaryFind(SeqList* s)
     return -1;
 }
 
+void SeqListDestory(SeqList* s)
+{
+    if (s->_array)
+    {
+        free(s->_array);
+        s->_array = NULL;
+        s->_capacity = s->_size = 0;
+    }
+}
+
+void SeqListSort(SeqList* s)
+{
+    if (s->_size == 0)
+    {
+        printf("无法排序!\n");
+    }
+    else
+    {
+        int i = 0;
+        for (i = 0; i < s->_size-1; i++)
+        {
+            int x = 0;
+            if (s->_array[i]>s->_array[i + 1])
+            {
+                x = s->_array[i];
+                s->_array[i] = s->_array[i + 1];
+                s->_array[i + 1] = x;
+            }
+        }
+    }
+    printf("排序成功！\n");
+}
