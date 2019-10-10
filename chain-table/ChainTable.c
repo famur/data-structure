@@ -133,3 +133,57 @@ void SeqListSort(SeqList* s)
     }
     printf("排序成功！\n");
 }
+
+void menu()
+{
+    printf("**********************************\n");
+    printf("***     1.头插      2.头删     ***\n");
+    printf("***     3.尾插      4.尾删     ***\n");
+    printf("***     5.展示      6.排序     ***\n");
+    printf("***     7.查找      0.退出     ***\n");
+    printf("**********************************\n");
+}
+
+int main()
+{
+    SeqList s;
+    int n = 0;
+    SeqListInit(&s, 10);
+    do
+    {
+        menu();
+        printf("请输入选择>");
+        scanf("%d", &n);
+        switch (n)
+        {
+            case 1:
+                SeqListPushFront(&s);
+                break;
+            case 2:
+                SeqListPopFront(&s);
+                break;
+            case 3:
+                SeqListPushBack(&s);
+                break;
+            case 4:
+                SeqListPopBack(&s);
+                break;
+            case 5:
+                SeqListPrint(&s);
+                break;
+            case 6:
+                SeqListSort(&s);
+                break;
+            case 7:
+                SeqListBinaryFind(&s);
+                break;
+            case 0:
+                SeqListDestory(&s);
+                break;
+            default:
+                printf("输入有误重新输入\n");
+                break;
+        }
+    } while (n);
+    return 0;
+}
