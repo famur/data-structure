@@ -126,3 +126,42 @@ void DelContact(contact*pcon)
     }
     
 }
+
+void SearchContact( contact*pcon)
+{
+    char name[MAX] = { 0 };
+    printf("请输入姓名：>");
+    scanf("%s", name);
+    int t=Search(pcon, name);
+    if (t == -1)
+    {
+        printf("输入有误查无此人\n");
+    }
+    else
+    {
+        printf("查找成功\n");
+        printf("%-10s\t%-5s\t%-5s\t%-12s\t%-20s\n", "姓名", "电话号码", "分类", "电子邮件地址", "条目编号");
+        printf("%-10s\t%-12s\t%-5d\t%-12s\t%-5d\n",
+                pcon->data[t].name,
+                pcon->data[t].tele,
+                pcon->data[t].type,
+                pcon->data[t].email,
+                pcon->data[t].num);
+    }
+}
+
+void ModifyContact(contact*pcon)
+{
+    char name[MAX] = { 0 };
+    printf("请输入姓名：>");
+    scanf("%s", name);
+    int t = Search(pcon, name);
+    if (t == -1)
+    {
+        printf("输入有误查无法修改\n");
+    }
+    else
+    {
+
+    }
+}
