@@ -162,6 +162,44 @@ void ModifyContact(contact*pcon)
     }
     else
     {
-
+        printf("请重新输入姓名：>");
+        scanf("%s", pcon->data[t].name);
+        printf("请重新输入电话号码：>");
+        scanf("%s", pcon->data[t].tele);
+        printf("请重新输入分类：>");
+        scanf("%d", &pcon->data[t].type);
+        printf("请重新输入电子邮件地址：>");
+        scanf("%s", pcon->data[t].email);
+        printf("请重新输入条目编号：>");
+        scanf("%d", &pcon->data[t].num);
     }
+    printf("修改成功\n");
+}
+
+void EmptyContact(contact*pcon)
+{
+    pcon->size = 0;
+    printf("清空成功\n");
+}
+
+void SortContact(contact*pcon)
+{
+    int i = 0;
+    for (i = 0; i < pcon->size; i++)
+    {
+        int t = 0;
+        for (t = 1; t < pcon->size; t++)
+        {
+            int ret=strcmp(pcon->data[i].name, pcon->data[t].name);
+            if (ret < 0)
+            {
+                char tmp[NAME_MAX];
+                strcpy(tmp, pcon->data[i].name);
+                strcpy(pcon->data[i].name, pcon->data[t].name);
+                strcpy(pcon->data[t].name, tmp);
+            }
+        }
+    }
+    printf("排序成功\n");
+    ShowContact(pcon);
 }
