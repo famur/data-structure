@@ -224,3 +224,25 @@ void Destroy(contact*pcon)
     free(pcon->data);
     pcon = NULL;
 }
+
+void Save(contact*pcon)
+{
+    contact *p;
+    FILE*fp;
+    p = pcon;
+    fp = fopen("C:\\Desktop\\bookslist.txt", "w");
+    fprintf(fp,"%-10s\t%-5s\t%-5s\t%-8s\t%-8s\n", "姓名", "电话号码", "分类", "电子邮件地址", "条目编号");
+    for (int i = 0; i < pcon->size; i++)
+    {
+        fprintf(fp,"%-10s\t%-5s\t%-5d\t%-12s\t%-20d\t\n",
+                pcon->data[i].name,
+                pcon->data[i].tele,
+                pcon->data[i].type,
+                pcon->data[i].email,
+                pcon->data[i].num);
+    }
+    fclose(fp);
+    printf("保存成功！\n");
+}
+
+
