@@ -203,3 +203,24 @@ void SortContact(contact*pcon)
     printf("排序成功\n");
     ShowContact(pcon);
 }
+
+void Capticty(contact*pcon)
+{
+    int x = pcon->capticty;
+    assert(pcon != NULL);
+    if (pcon->size == pcon->capticty)
+    {
+        pcon->data = (peolnfo*)realloc(pcon->data, sizeof(peolnfo)*((x)* 2));
+    }
+    pcon->capticty = x * 2;
+    printf("增容成功！\n");
+}
+
+void Destroy(contact*pcon)
+{
+    assert(pcon != NULL);
+    pcon->size = 0;
+    pcon->capticty = 0;
+    free(pcon->data);
+    pcon = NULL;
+}
