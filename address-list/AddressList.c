@@ -255,3 +255,56 @@ void menu()
     printf("**********0.退出程序                          **********\n");
     printf("***************************************\n");
 }
+
+void text()
+{
+    int input=0;
+    contact con;
+    InitContact(&con);
+    do
+    {
+        menu();
+        printf("请输入选择:>");
+        scanf("%d", &input);
+        switch (input)
+        {
+            case ADD:
+                AddContact(&con);
+                break;
+            case DEL:
+                DelContact(&con);
+                break;
+            case SEARCH:
+                SearchContact(&con);
+                break;
+            case MODIFY:
+                ModifyContact(&con);
+                break;
+            case SHOW:
+                ShowContact(&con);
+                break;
+            case EMPTY:
+                EmptyContact(&con);
+                break;
+            case SORT:
+                SortContact(&con);
+                break;
+            case EXIT:
+                Destroy(&con);
+                break;
+            case 8:
+                Save(&con);
+                printf("手机用户保存");
+                break;
+            default:
+                printf("选择错误\n");
+                break;
+        }
+    }while (input);
+}
+
+int main()
+{
+    text();
+    return 0;
+}
