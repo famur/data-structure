@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1247,821">
+    <VerticalLayout width="1247" height="821" bkimage="C:\Users\ASUS\Desktop\BIT课件-2018-V2\思维导图\311991281_WPS图片.jpg">
+        <HorizontalLayout width="1257" height="50" bkcolor="#FF00FFFF">
+            <Button name="btn_min" float="true" pos="1121,12,0,0" width="60" height="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;C:\Users\ASUS\Desktop\duilib-master\duilib-master\bin\skin\GameRes\frame_btn_min.bmp&apos; source=&apos;26,0,52,18&apos;" hotimage="file=&apos;C:\Users\ASUS\Desktop\duilib-master\duilib-master\bin\skin\GameRes\frame_btn_min.bmp&apos; source=&apos;52,0,78,18&apos;" pushedimage="file=&apos;C:\Users\ASUS\Desktop\duilib-master\duilib-master\bin\skin\GameRes\frame_btn_min.bmp&apos; source=&apos;78,0,104,18&apos;" />
+            <Button name="btn_close" float="true" pos="1181,12,0,0" width="60" height="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="C:\Users\ASUS\Desktop\duilib-master\duilib-master\bin\skin\GameRes\frame_btn_close_normal.bmp" hotimage="C:\Users\ASUS\Desktop\duilib-master\duilib-master\bin\skin\GameRes\frame_btn_close_down.bmp" pushedimage="C:\Users\ASUS\Desktop\duilib-master\duilib-master\bin\skin\GameRes\frame_btn_close_disable.bmp" />
+        </HorizontalLayout>
+        <VerticalLayout width="1247" height="56">
+            <Edit name="edit_path" float="true" pos="209,14,0,0" width="337" height="30" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Button name="bin_load" text="加载" float="true" pos="588,14,0,0" width="60" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="C:\Users\ASUS\Desktop\duilib-master\duilib-master\bin\skin\GameRes\headerctrl_hot.bmp" hotimage="C:\Users\ASUS\Desktop\duilib-master\duilib-master\bin\skin\GameRes\headerctrl_normal.bmp" />
+            <Combo float="true" pos="38,14,0,0" width="123" height="30" bkimage="C:\Users\ASUS\Desktop\duilib-master\duilib-master\bin\skin\GameRes\Combo_nor.bmp" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" normalimage="C:\Users\ASUS\Desktop\duilib-master\duilib-master\bin\skin\GameRes\Combo_nor.bmp" hotimage="C:\Users\ASUS\Desktop\duilib-master\duilib-master\bin\skin\GameRes\Combo_over.bmp" pushedimage="C:\Users\ASUS\Desktop\duilib-master\duilib-master\bin\skin\GameRes\Combo_over.bmp" dropboxsize="0,150" />
+        </VerticalLayout>
+        <VerticalLayout width="1249" height="66">
+            <Edit float="true" pos="121,20,0,0" width="140" height="30" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Edit float="true" pos="405,20,0,0" width="140" height="30" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Button name="btn_cut" text="截取" float="true" pos="649,19,0,0" width="60" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="C:\Users\ASUS\Desktop\duilib-master\duilib-master\bin\skin\GameRes\headerctrl_hot.bmp" hotimage="C:\Users\ASUS\Desktop\duilib-master\duilib-master\bin\skin\GameRes\headerctrl_normal.bmp" />
+            <Label text="start" float="true" pos="16,20,0,0" width="60" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label text="end" float="true" pos="303,20,0,0" width="60" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        </VerticalLayout>
+        <VerticalLayout width="685" height="655">
+            <List width="668" height="629" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF">
+                <ListHeader width="60" height="242" />
+            </List>
+        </VerticalLayout>
+        <Edit float="true" pos="774,222,0,0" width="407" height="539" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label text="输入文本" float="true" pos="913,183,0,0" width="108" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Button text="提交" float="true" pos="952,776,0,0" width="60" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+    </VerticalLayout>
+</Window>
