@@ -1,13 +1,12 @@
-﻿生成启动时间为 2019/12/15 15:55:01。
-     1>项目“C:\Users\ASUS\documents\visual studio 2013\Projects\Win32项目\Win32项目\Win32项目.vcxproj”在节点 2 上(Build 个目标)。
+﻿生成启动时间为 2020/3/16 22:48:06。
+     1>项目“C:\Users\ASUS\Documents\Visual Studio 2013\Projects\Win32\Win32项目\Win32项目.vcxproj”在节点 2 上(Build 个目标)。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Win32项目.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
          D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\ASUS\Documents\Visual Studio 2013\Projects\Win32项目\Win32项目\DuiLib" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt test.cpp
          test.cpp
-       Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\ASUS\documents\visual studio 2013\Projects\Win32项目\Debug\Win32项目.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\ASUS\Documents\Visual Studio 2013\Projects\Win32项目\Debug\lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\ASUS\documents\visual studio 2013\Projects\Win32项目\Debug\Win32项目.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\ASUS\documents\visual studio 2013\Projects\Win32项目\Debug\Win32项目.lib" /MACHINE:X86 Debug\test.obj
-         Win32项目.vcxproj -> C:\Users\ASUS\documents\visual studio 2013\Projects\Win32项目\Debug\Win32项目.exe
-     1>已完成生成项目“C:\Users\ASUS\documents\visual studio 2013\Projects\Win32项目\Win32项目\Win32项目.vcxproj”(Build 个目标)的操作。
+     1>c:\users\asus\documents\visual studio 2013\projects\win32\win32项目\test.cpp(5): fatal error C1083: 无法打开包括文件: “UIlib.h”: No such file or directory
+     1>已完成生成项目“C:\Users\ASUS\Documents\Visual Studio 2013\Projects\Win32\Win32项目\Win32项目.vcxproj”(Build 个目标)的操作 - 失败。
 
-生成成功。
+生成失败。
 
-已用时间 00:00:01.34
+已用时间 00:00:01.83
